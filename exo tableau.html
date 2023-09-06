@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+
+        //ex 2
         let personne1 = {
             nom : "Doe",
             prenom : "John",
@@ -27,9 +29,52 @@
             ville : "Caen"
         }
 
-        let personnes= [personne1, personne2, personne3];
+        let personnes = [personne1, personne2, personne3];
 
-        console.log(personnes)
+        console.table(personnes);
+
+        //ex3
+        personnes.push( personne4 = {
+            nom : "Doe",
+            prenom : "Marc",
+            age : 32,
+            ville : "Marseille"
+        })
+
+        console.table(personnes);
+
+        //ex4
+        personnes[0].prenom = "Jean";
+        personnes.splice(1,1);
+
+        console.table(personnes);
+
+        //ex5
+        let nombre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(nombre[0]);
+        console.log(nombre[nombre.length-1]);
+        console.log(nombre.length);
+
+        //ex 6
+        let dizaine = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+        console.table(dizaine);
+        dizaine.reverse();
+        console.table(dizaine);
+
+        //ex7
+        let numbers = [ 2, 5, 1, 9, 0, 3, 7, 4, 6, 8 ];
+        console.table(numbers);
+        numbers.sort();
+        console.table(numbers);
+
+        //ex8
+        numbers.push(11);
+        console.table(numbers);
+        numbers.unshift(0)
+        console.table(numbers);
+        numbers.pop();
+        console.table(numbers);
     </script>
 </head>
 <body>
