@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            //princecorg
+            //petit test
+            let v = "Hello World";
+            let test = document.getElementById("test");
+            test.textContent = v;
+            //ex 1
+            let t = 30;
+            let tc = document.getElementById("tc");
+            tc.textContent = "la température est de " + t + "° Celsus";
+            let tf = document.getElementById("tf");
+            tf.textContent = "la température est de " + (t * 9/5 + 32) + "° Fahrenheit";
+            //ex 2
+            let lar = 4;
+            let long = 3;
+            let air_rect = document.getElementById("air_rect");
+            air_rect.textContent = "la largeur du rectangle est de " + long * lar + "cm carré";
+            //ex 3
+            let nom = "Riguet";
+            let prenom = "Cyrille";
+            let nom_prenom = nom + " " + prenom;
+            let np = document.getElementById("np");
+            np.textContent = nom_prenom;
+            //ex 4
+            const mTVA = 20;
+            let mHT = 10;
+            let mTTC = (mHT * (mTVA / 100)) + mHT;
+            let rep = document.getElementById("rep");
+            rep.textContent = "montant HT = " + mHT + ", montant TVA = " + mTVA + ", montant TTC = " + mTTC
+            //ex 6
+            let poids = 63;
+            let taille = 1.71;
+            let IMC = document.getElementById("IMC");
+            IMC.textContent = Math.round(((poids / (taille * taille))*100))/100;
+            //ex 7
+            const mMin = 25;
+            let mTot = 15;
+            let liv = 3;
+            let cmd = document.getElementById("cmd");
+            mTot >= mMin ? cmd.textContent = "Livraison gratuite" : cmd.textContent = ("Frais de livraison : " + liv +"€");
+
+            //ex 8
+            let bin = "0100";
+            let aff = document.getElementById("aff");
+            aff.textContent = "le nombre en décimal est " + parseInt(bin, 2) + ", alors qu'il est égal à " + bin + " en binaire";
+        })
+         
+    </script>
+</head>
+<body>
+    <div>petit test</div>
+    <div id="test"></div>
+    <br>
+    <div>ex 1</div>
+    <div id="tc"></div>
+    <div id="tf"></div>
+    <br>
+    <div>ex 2</div>
+    <div id="air_rect"></div>
+    <br>
+    <div>ex 3</div>
+    <div id="np"></div>
+    <br>
+    <div>ex 4</div>
+    <div id="rep"></div>
+    <br>
+    <div>ex 6</div>
+    <div id="IMC"></div>
+    <br>
+    <div>ex 7</div>
+    <div id="cmd"></div>
+    <br>
+    <div>ex 8</div>
+    <div id="aff">aff</div>
+</body>
+</html>
