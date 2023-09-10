@@ -18,10 +18,24 @@
             let tf = document.getElementById("tf");
             tf.textContent = "la température est de " + (t * 9/5 + 32) + "° Fahrenheit";
             //ex 2
-            let lar = 4;
-            let long = 3;
+            // let lar = 4;
+            // let long = 3;
+            // let air_rect = document.getElementById("air_rect");
+            // air_rect.textContent = "la surface du rectangle est de " + long * lar + "cm²";
+
+            let long = document.getElementById("long");
+            let larg = document.getElementById("larg");
             let air_rect = document.getElementById("air_rect");
-            air_rect.textContent = "la largeur du rectangle est de " + long * lar + "cm carré";
+            air_rect.textContent = "la surface du rectangle est de " + long.value * larg.value + "cm²";
+
+            long.addEventListener('input', () => {
+                air_rect.textContent = "la surface du rectangle est de " + long.value * larg.value + "cm²";
+            });
+
+            larg.addEventListener('input', () => {
+                air_rect.textContent = "la surface du rectangle est de " + long.value * larg.value + "cm²";
+            });
+
             //ex 3
             let nom = "Riguet";
             let prenom = "Cyrille";
@@ -67,6 +81,10 @@
     <div id="tf"></div>
     <br>
     <div>ex 2</div>
+    <span>longueur</span>
+    <input type="number" id="long" oninput="calc()" value="4">
+    <span>largeur</span>
+    <input type="number" id="larg" oninput="calc()" value="2">
     <div id="air_rect"></div>
     <br>
     <div>ex 3</div>
